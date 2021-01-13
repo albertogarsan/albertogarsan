@@ -6,10 +6,10 @@
 	<title>albertogarsan</title>
 	
 	<!-- NORMALIZE -->
-	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	
 	<!-- ESTILS -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	
 	<!-- FAVICON -->
     <link rel="icon" type="svg" href="favicon.svg">
@@ -17,19 +17,20 @@
 	<!-- FONTAWESOME -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	
     <!-- JQUERY -->
-	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 	<!-- CHAT Buttons -->
-	<script src="chat.js"></script>
+	<script src="js/chat.js"></script>
 	<script>
 		var xat = new chat.Main();
+		window.onload = function () {
+			xat.load();
+		}
 	</script>
+
 </head>
 
 <body>
@@ -43,16 +44,17 @@
 				<ul class="submenu__lletraA">
 	
 					<li class="submenu__lletraA--item btn-toggle">
-						<a href="#">
+						<a>
 							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
 								<path fill="currentColor"
 								d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
 							</svg>
 						</a>
 					</li>
-		
+					
 					<li class="submenu__lletraA--item">
-						<a href="#">
+						<span class="tooltiptext">VAL</span>
+						<a>
 							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
 								<path fill="currentColor"
 								d="M20,5H10.88L10,2H4A2,2 0 0,0 2,4V17A2,2 0 0,0 4,19H11L12,22H20A2,2 0 0,0 22,20V7A2,2 0 0,0 20,5M7.17,14.59A4.09,4.09 0 0,1 3.08,10.5A4.09,4.09 0 0,1 7.17,6.41C8.21,6.41 9.16,6.78 9.91,7.5L10,7.54L8.75,8.72L8.69,8.67C8.4,8.4 7.91,8.08 7.17,8.08C5.86,8.08 4.79,9.17 4.79,10.5C4.79,11.83 5.86,12.92 7.17,12.92C8.54,12.92 9.13,12.05 9.29,11.46H7.08V9.91H11.03L11.04,10C11.08,10.19 11.09,10.38 11.09,10.59C11.09,12.94 9.5,14.59 7.17,14.59M13.2,12.88C13.53,13.5 13.94,14.06 14.39,14.58L13.85,15.11L13.2,12.88M13.97,12.12H13L12.67,11.08H16.66C16.66,11.08 16.32,12.39 15.1,13.82C14.58,13.2 14.21,12.59 13.97,12.12M21,20A1,1 0 0,1 20,21H13L15,19L14.19,16.23L15.11,15.31L17.79,18L18.5,17.27L15.81,14.59C16.71,13.56 17.41,12.34 17.73,11.08H19V10.04H15.36V9H14.32V10.04H12.36L11.18,6H20A1,1 0 0,1 21,7V20Z" />
@@ -68,7 +70,7 @@
 							</svg>
 						</a>
 					</li>
-		
+					
 					<li class="submenu__lletraA--item">
 						<a href="https://www.linkedin.com/in/albertogarciasan/" target="_blank">
 							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -85,69 +87,71 @@
     <!-- MISSATGES -->
     <div class="contenidor">
 		
-			<div class="punts top">
-				<div class="punt"></div>
-				<div class="punt"></div>
-				<div class="punt"></div>
-			</div>
+		<div class="punts top">
+			<div class="punt"></div>
+			<div class="punt"></div>
+			<div class="punt"></div>
+		</div>
 		
 		<!-- perDefectePart -->
 		<!-- Primer missatge -->
-        <div class="contingut contingut__resposta msg1">
-          <a name="hi"></a>
-            <img class="contingut__imatge" src="1.jpg" alt=""> 
-            <h1>Hi there! My name is <span>Alberto Garsan</span>. <br>I am a Valencia-based <span>UI/UX Designer and Front-end developer.</span> </h1>
-		</div>
+		<div class="contingut contingut__resposta msg1">
+			<a name="hi"></a>
+			<img class="contingut__imatge" src="img/1.jpg" alt="">
+			<h1 id="hi"></h1>
+		</div>			
 		<!-- Segon missatge -->
 		<div class="contingut contingut__resposta msg2">
-			<a name="hi"></a>
-			<p class="contingut__text">Exploring the limits between visual design and technology through <span>code drives me nuts!</span></p>
+			<p class="contingut__text" id="text1"></p>
 		</div>
-		<!-- <div class="dobleCheck">
-			<svg style="width:18px;height:18px" viewBox="0 0 24 24">
-				<path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" />
-			</svg>
-		</div> -->
+		<div id="default" class="contingut contingut__resposta1 msg2 bottom">
+			<div class="contingut__hora--resposta hora1"></div>
+		</div>
+			
         
 		<!-- primeraPart . moreabout -->
 		<!-- Primera resposta -->
-		<section id="primeraPart" style="display:none">
+		<section id="primeraPart">
 			<div class="contingut contingut__pregunta pregunta__animacio">
 				<a name="moreabout"></a>
-				<p class="contingut__text contingut__text--pregunta">More about!</p>
+				<p class="contingut__text contingut__text--pregunta" id="part1_1"></p>
 			</div>
-				<div class="punts">
-					<div class="punt"></div>
-					<div class="punt"></div>
-					<div class="punt"></div>
-				</div>
-
+			<div class="contingut contingut__pregunta1 pregunta__animacio bottom">
+				<div class="contingut__hora hora"></div>
+			</div>
+			<div class="punts">
+				<div class="punt"></div>
+				<div class="punt"></div>
+				<div class="punt"></div>
+			</div>
 			<!-- Tercer missatge -->
 			<div class="contingut contingut__resposta msg4">
-				<p class="contingut__text">For sure!</p>
+				<p class="contingut__text" id="part1_2"></p>
 			</div>
 			<!-- Quart missatge -->
 			<div class="contingut contingut__resposta msg5">
-				<p class="contingut__text">I absolutely love creating minimal soul and <span>interested</span> about <span>AR Environment</span>, using and involving visual experiences in each project by focussing on <span>creative ideas</span> that make people have <span>goosebumps</span> 😃</p>
+				<p class="contingut__text" id="part1_3"></p>
 			</div>
 			<!-- Quint missatge -->
 			<div class="contingut contingut__resposta msg6">
-				<p class="contingut__text">I’ll tell you a secret: I love exercising, playing clarinet, my laptop, my camera, good company and a good landscape to share with cool people 😎</p>
+				<p class="contingut__text" id="part1_4"></p>				
 			</div>
-			<!-- <div class="dobleCheck1">
-				<svg style="width:18px;height:18px" viewBox="0 0 24 24">
-					<path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" />
-				</svg>
-			</div> -->
-
+			<div class="contingut contingut__resposta msg6 bottom">
+				<div class="contingut__hora--resposta hora2"></div>
+			</div>
 		</section>
 		
 		<!-- segonaPart . study -->
         <!-- Segona resposta -->
-        <section id="segonaPart" style="display:none">
+        <section id="segonaPart">
 			<div class="contingut contingut__pregunta pregunta__animacio">
 				<a name="study"></a>
-				<p class="contingut__text contingut__text--pregunta">Where did you studied?</p>
+				<p class="contingut__text contingut__text--pregunta" id="part2_1"></p>
+			</div>
+			<div class="contingut contingut__pregunta1 pregunta__animacio bottom">
+				<div class="contingut__hora hora">
+					<p></p>
+				</div>
 			</div>
 			<div class="escrivint">
 				<div class="punts">
@@ -158,29 +162,30 @@
 			</div>
 			<!-- Sise missatge -->
 			<div class="contingut contingut__resposta msg4">
-				<p class="contingut__text">I studied <span>Interactive Digital Development Design at ESAT Valencia</span>  (2020-2021) and <span> Audiovisual Communication at the Polytechnic University of Valencia</span> (2014-2018).</p>
+				<p class="contingut__text" id="part2_2"></p>
 			</div>
 			<!-- Septim missatge -->
 			<div class="contingut contingut__resposta msg5">
-				<p class="contingut__text">One thing that characterizes my learning is that it has been a very <span>self-taught train</span>. My knowledge has increase thanks to every book, course, lecture and article. </p>
+				<p class="contingut__text" id="part2_3"></p>
 			</div>
 			<!-- Octau missatge -->
 			<div class="contingut contingut__resposta msg6">
-				<p class="contingut__text"><span>‘Never stop learning’</span>  could be my late motiv.</p>
+				<p class="contingut__text" id="part2_4"></p>
 			</div>
-			<!-- <div class="dobleCheck1">
-				<svg style="width:18px;height:18px" viewBox="0 0 24 24">
-					<path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" />
-				</svg>
-			</div> -->
+			<div class="contingut contingut__resposta msg6 bottom">
+				<div class="contingut__hora--resposta hora2"><p></p></div>
+			</div>	
 		</section>
 		
 		<!-- terceraPart . experience -->
 		<!-- Tercera resposta -->
-		<section id="terceraPart" style="display:none">
+		<section id="terceraPart">
 			<div class="contingut contingut__pregunta pregunta__animacio">
 				<a name="experience"></a>
-				<p class="contingut__text contingut__text--pregunta">Experience?</p>
+				<p class="contingut__text contingut__text--pregunta" id="part3_1"></p>
+			</div>
+			<div class="contingut contingut__pregunta1 pregunta__animacio bottom">
+				<div class="contingut__hora hora"></div>
 			</div>
 			<div class="escrivint">
 				<div class="punts">
@@ -191,36 +196,36 @@
 			</div>
 			<!-- Nove missatge -->
 			<div class="contingut contingut__resposta msg4">
-				<p class="contingut__text">Despite of the fact that I started my career as a comunicator and designer, I have been able take pace in diferent projects with social responsability</p>
+				<p class="contingut__text" id="part3_2"></p>
 			</div>
 			<!-- Decim missatge -->
 			<div class="contingut contingut__resposta msg5">
-				<img class="contingut__imatge" src="2.jpg" alt=""> 
-				<p class="contingut__text"><span>A diabetic in the Dakar: <a href="https://www.undiabeticoeneldakar.org" target="_blank">undiabeticoeneldakar.org</a></p>
+				<img class="contingut__imatge" src="img/2.jpg" alt=""> 
+				<p class="contingut__text" id="part3_3"></p>
 			</div>
 			<!-- Undecim missatge -->
 			<div class="contingut contingut__resposta msg6">
-				<img class="contingut__imatge" src="3.jpg" alt="">
-				<p class="contingut__text"><span>The website of the village of Potries: <a href="https://www.potries.org" target="_blank">potries.org</a> | <a href="http://www.turisme.potries.org" target="_blank">turisme.potries.org</a> | <a href="http://musicfest.potries.org" target="_blank">musicfest.potries.org</a></span> 
-				</p>
+				<img class="contingut__imatge" src="img/3.jpg" alt="">
+				<p class="contingut__text" id="part3_4"></p>
 			</div>
 			<!-- Duodecim missatge -->
 			<div class="contingut contingut__resposta msg7">
-				<p class="contingut__text">To conclude, this page has been designed and coded by my very self.</p>
+				<p class="contingut__text" id="part3_5"></p>
 			</div>
-			<!-- <div class="dobleCheck2">
-				<svg style="width:18px;height:18px" viewBox="0 0 24 24">
-					<path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" />
-				</svg>
-			</div> -->
+			<div class="contingut contingut__resposta bottom">
+				<div class="contingut__hora--resposta hora3"></div>
+			</div>	
 		</section>
 		
 		<!-- quartaPart . contact -->
         <!-- Quarta resposta -->
-		<section id="quartaPart" style="display:none">
+		<section id="quartaPart">
 			<a name="contact"></a>
 			<div class="contingut contingut__pregunta pregunta__animacio">
-				<p class="contingut__text contingut__text--pregunta">Contact us!</p>
+				<p class="contingut__text contingut__text--pregunta"  id="part4_1"></p>
+			</div>
+			<div class="contingut contingut__pregunta1 pregunta__animacio bottom">
+				<div class="contingut__hora hora"></div>
 			</div>
 			<div class="escrivint">
 				<div class="punts">
@@ -270,21 +275,20 @@
 			</div>
 			<!-- Decim quart missatge -->
 			<div class="contingut contingut__resposta msg9">
-				<p class="contingut__text"><span>Join in</span> my vision of understanding life and feel free to talk to me for in-depht contact.</p>
+				<p class="contingut__text" id="part4_2"></p>
 			</div>
 			<!-- Decim quint missatge -->
 			<div class="contingut contingut__resposta msg10">
-				<p class="contingut__text">Here is my social media platforms: <span><a href="https://www.instagram.com/albertogarsan_" target="_blank">instagram</a>, <a href="https://www.linkedin.com/in/albertogarciasan/" target="_blank">linkedin</a></span></p>
+				<p class="contingut__text" id="part4_3"></p>
 			</div>
 			<!-- Decim sext missatge -->
 			<div class="contingut contingut__resposta msg11">
-				<p class="contingut__text">And mail me: <span><a href="mailto:hello@albertogarsan" target="_blank" rel="noopener noreferrer">hello@albertogarsan.com</a></span></p>
+				<a href="albertogarsan-cv.pdf" target="_blank"><img class="contingut__imatge" src="img/4.jpg" alt="thumbnail-about-my-CV"></a> 
+				<p class="contingut__text" id="part4_4"></p>
 			</div>
-			<!-- <div class="dobleCheck2">
-				<svg style="width:18px;height:18px" viewBox="0 0 24 24">
-					<path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" />
-				</svg>
-			</div> -->
+			<div class="contingut contingut__resposta bottom">
+				<div class="contingut__hora--resposta hora3"></div>
+			</div>
 		</section>
 	</div>
 
@@ -298,17 +302,16 @@
         
 
         <ul class="menu__wrap">
-		  <a href="#moreabout"><li onclick="xat.showBtn(0);">More about!</li></a>
-          <a href="#study"><li onclick="xat.showBtn(1);">Where did you studied?</li></a>
-          <a href="#experience"><li onclick="xat.showBtn(2);">Experience?</li></a>
-          <a href="#contact"><li onclick="xat.showBtn(3);">Contact us!</li></a>
-          <a href="#hi"><li onclick="xat.showBtn(4);">Hi, again!</li></a>
+			<a href="#moreabout"><li onclick="xat.showBtn(0);">More about!</li></a>
+			<a href="#study"><li onclick="xat.showBtn(1);">Where did you study?</li></a>
+			<a href="#experience"><li onclick="xat.showBtn(2);">Experience?</li></a>
+			<a href="#contact"><li onclick="xat.showBtn(3);">Contact us!</li></a>
+			<a href="#hi"><li onclick="xat.showBtn(4);">Hi, again!</li></a>
         </ul>
 
     </nav>
 
 	<!-- MENU RESPONSIVE BTN -->
-	
 	<script type="text/javascript">
 
 		$("nav .icon__menu").click(function() {
@@ -336,6 +339,6 @@
   		}
 	});
 	</script>
-    <script src="audio.js"></script>
+    <script src="js/audio.js"></script>
 </body>
 </html>

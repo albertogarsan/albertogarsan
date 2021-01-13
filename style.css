@@ -21,6 +21,10 @@ a {
   color: var(--taronja);
 } 
 
+a:visited {
+  color: #BA2900;
+}
+
 body.dark-theme {
   color: var(--blanc);
   background: var(--negre);
@@ -92,6 +96,7 @@ body.dark-theme .menu__lletraA--fixed h2 {
   padding: 15px;
   border: 3px solid var(--negre);
   border-radius: 30px;
+  position: relative;
 }
 
 body.dark-theme .submenu__lletraA--item {
@@ -118,6 +123,25 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
 
 .menu__lletraA--fixed .submenu__lletraA--item:hover a {
   color: var(--blanc);
+}
+
+
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: var(--blanc);
+  text-align: center;
+  padding: 5px 0;
+  font-weight: 300;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.submenu__lletraA--item:hover .tooltiptext {
+  visibility: visible;
 }
 
 
@@ -165,9 +189,9 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
   margin: 20px 10px 0px 10px;
 }
 
-.contingut:first-child {
+/* .contingut:first-child {
   margin: 40px 10px 10px 10px;
-}
+} */
 
 @media (max-width: 480px) {
   .contingut {
@@ -177,6 +201,21 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
 
 .contingut__resposta {
   background-color: var(--negre);
+  position: relative;
+  align-self: flex-start;
+  width: auto;
+}
+
+.contingut__resposta:last-child{
+  background-color: transparent;
+}
+
+
+.contingut__resposta1 {
+  position: relative;
+  align-self: flex-start;
+  width: auto;
+  background-color: transparent;
 }
 
 body.dark-theme .contingut__resposta {
@@ -188,6 +227,43 @@ body.dark-theme .contingut__resposta {
   background-color: var(--taronja);
   align-self: flex-end;
   width: auto;
+  position: relative;
+}
+
+.contingut__pregunta1 {
+  background-color: transparent;
+  align-self: flex-end;
+  width: auto;
+  position: relative;
+}
+
+.bottom {
+  margin: 20px 20px 30px 20px;
+}
+
+.contingut__hora {
+  font-size: .8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contingut__hora p{
+
+  font-size: .8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contingut__hora--resposta {
+  font-size: .8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contingut__hora--resposta p{
+  font-size: .8rem;
+  margin: 0;
+  padding: 0;
 }
 
 .contingut__imatge {
@@ -220,10 +296,11 @@ h1 {
 }
 
 
-/* PUNTS */
+/* ///////////////////////////////// PUNTS */
 .top {
   margin-top: 20px;
 }
+
 .punts {
   width: 20px;
   height: 20px;
@@ -281,48 +358,85 @@ body.dark-theme .punt {
   background: var(--blanc);
 }
 
-/*Doble Check */
-.dobleCheck {
-  margin-left: 20px;
-  margin-top: 10px;
-  animation: color .5s ease-in-out 1;
+
+/*ANIMACION DE LOS MENSAJES */
+.hora {
+  animation-name: hora;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
   animation-fill-mode: both;
-  animation-delay: 2.2s;
+  animation-delay: .2s;
 }
 
-.dobleCheck1 {
-  margin-left: 20px;
-  margin-top: 10px;
-  animation: color .5s ease-in-out 1;
-  animation-fill-mode: both;
-  animation-delay: 4s;
-}
-
-.dobleCheck2 {
-  margin-left: 20px;
-  margin-top: 10px;
-  animation: color .5s ease-in-out 1;
-  animation-fill-mode: both;
-  animation-delay: 5.2s;
-}
-
-
-
-@keyframes color {
+@keyframes hora {
   0% {
     opacity: 0;
-    color: var(--taronja);
   }
 
   100% {
     opacity: 1;
-    color: var(--taronja);
+  }
+}
+
+.hora1 {
+  animation-name: hora1;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 2.2s;
+}
+
+@keyframes hora1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hora2 {
+  animation-name: hora2;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 3.8s;
+}
+
+@keyframes hora2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hora3 {
+  animation-name: hora3;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 4.5s;
+}
+
+@keyframes hora3 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
 
-
-/*ANIMACION DE LOS MENSAJES */
 .msg1 {
   animation-name: msg1;
   animation-duration: .5s;
@@ -485,7 +599,7 @@ body.dark-theme .punt {
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  animation-delay: 4.9s;
+  animation-delay: 4.2s;
 }
 
 @keyframes msg7 {
@@ -589,7 +703,7 @@ body.dark-theme .punt {
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  animation-delay: 5s;
+  animation-delay: 4.2s;
 }
 
 @keyframes msg11 {
@@ -676,16 +790,6 @@ body.dark-theme .menu__wrap li:hover {
   border: 3px solid var(--taronja);
 }
 
-.menu__wrap li:hover a {
-  color: var(--blanc);
-}
-
-.icon__menu i {
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
-}
-
 .menu__wrap a {
   color: var(--negre);
   text-decoration: none;
@@ -695,8 +799,15 @@ body.dark-theme .menu__wrap a {
   color: var(--blanc);
 }
 
-.menu__wrap a:hover {
+.menu__wrap a li:hover {
   color: var(--blanc);
+} 
+
+
+.icon__menu i {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -868,7 +979,7 @@ img {
 
 
 
-/*DARK MODE*/
+/* ///////////////////////////////// DARK MODE */
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -974,16 +1085,24 @@ img {
     color: var(--blanc);
   }
 
-  body.light-theme .menu__wrap a:hover {
-    color: var(--blanc);
-  }
-
   body.light-theme .submenu__lletraA--item svg{
     color: var(--negre);
   }
 
   body.light-theme .submenu__lletraA--item:hover svg{
     color: var(--blanc);
+  }
+
+  body.light-theme .contingut__hora--resposta {
+    color: var(--negre);
+  }
+
+  body.light-theme .contingut__hora {
+    color: var(--negre);
+  }
+
+  body.light-theme .contingut__resposta:last-child{
+    background-color: transparent;
   }
 
 } 
