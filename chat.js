@@ -1,6 +1,5 @@
 var chat = chat || {};
 
-
 chat.Main = function () {
 };
 
@@ -16,7 +15,16 @@ chat.Main.prototype = function () {
 		document.getElementById('text1').innerHTML = "Exploring the limits between visual design and technology through <span>code drives me nuts!</span>";
 
 		$('#default').find('.contingut__hora--resposta').text(composeTime())
-	},	
+
+
+		$('#menuTxt').html('Try to say...');
+		$('#btn1').html('More about!');
+		$('#btn2').html('Where did you study?');
+		$('#btn3').html('Experience');
+		$('#btn4').html('Contact us!');
+		$('#btn5').html('Hi, again!');
+	},
+
 	showBtn = function (selBtn) {
 		if (selBtn === 0) {
 			document.getElementById('primeraPart').style.display = 'flex';
@@ -72,24 +80,47 @@ chat.Main.prototype = function () {
 			$('#default').find('.contingut__hora--resposta').text(composeTime())
 		}
 		
-		if ($(window).width() < 1024) $('#iconM').click();
+		if ($(window).width() < 1024) $('.menu__wrap').slideToggle();
 		
 	},
+
+	menu = function(){
+	$(".menu__wrap").slideToggle();
+    $(window).resize(function(){
+		  if($(window).width() > 1024){
+			  $("ul").removeAttr('style');
+		  }
+    });
+	},
+
+	darkMode = function(){
+		const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+		if (prefersDarkScheme.matches) {
+    			document.body.classList.toggle("light-theme");
+  		}else {
+    		document.body.classList.toggle("dark-theme");
+  		}
+    },
 
 	composeTime = function(){
 		let date = new Date();
 		let hours = date.getHours();
 		let minutes = date.getMinutes();
-		if(minutes < 10) {
+		
+    if(minutes < 10) {
 			minutes = '0' + minutes;
 		}
+    
 		return hours + ':' + minutes;
 	};
 
 	//public members
 	return {
 		load: load,
-		showBtn: showBtn
+		showBtn: showBtn,
+		darkMode: darkMode,
+		menu: menu
 	};
 
 }();			

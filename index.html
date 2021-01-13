@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Webpage of Alberto Garsan, UI/UX Designer & Front-end Developer based in València"/>
+	<meta name="keywords" content="albertogarsan, web designer, frontend developer, ui design, ux design, ui/ux design, ui designer, ux designer, ui/ux designer, alberto garsan, albertogarsan_, albertogarsan1, diseñador web, desarrollo web, valencia"/>
+	<meta name="author" content="Alberto Garsan" />
+	<meta name="copyright" content="Alberto Garcia Sánchez" />
 	<title>albertogarsan</title>
 	
 	<!-- NORMALIZE -->
-	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	
 	<!-- ESTILS -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	
 	<!-- FAVICON -->
     <link rel="icon" type="svg" href="favicon.svg">
@@ -23,7 +27,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 	<!-- CHAT Buttons -->
-	<script src="chat.js"></script>
+	<script src="js/chat.js"></script>
 	<script>
 		var xat = new chat.Main();
 		window.onload = function () {
@@ -43,7 +47,7 @@
 			<div class="fixed">
 				<ul class="submenu__lletraA">
 	
-					<li class="submenu__lletraA--item btn-toggle">
+					<li class="submenu__lletraA--item btn-toggle" onclick="xat.darkMode();">
 						<a>
 							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
 								<path fill="currentColor"
@@ -97,7 +101,7 @@
 		<!-- Primer missatge -->
 		<div class="contingut contingut__resposta msg1">
 			<a name="hi"></a>
-			<img class="contingut__imatge" src="1.jpg" alt="">
+			<img class="contingut__imatge" src="img/1.jpg" alt="">
 			<h1 id="hi"></h1>
 		</div>			
 		<!-- Segon missatge -->
@@ -200,12 +204,12 @@
 			</div>
 			<!-- Decim missatge -->
 			<div class="contingut contingut__resposta msg5">
-				<img class="contingut__imatge" src="2.jpg" alt=""> 
+				<img class="contingut__imatge" src="img/2.jpg" alt=""> 
 				<p class="contingut__text" id="part3_3"></p>
 			</div>
 			<!-- Undecim missatge -->
 			<div class="contingut contingut__resposta msg6">
-				<img class="contingut__imatge" src="3.jpg" alt="">
+				<img class="contingut__imatge" src="img/3.jpg" alt="">
 				<p class="contingut__text" id="part3_4"></p>
 			</div>
 			<!-- Duodecim missatge -->
@@ -283,7 +287,7 @@
 			</div>
 			<!-- Decim sext missatge -->
 			<div class="contingut contingut__resposta msg11">
-				<a href="albertogarsan-cv.pdf" target="_blank"><img class="contingut__imatge" src="4.jpg" alt="thumbnail-about-my-CV"></a> 
+				<a href="albertogarsan-cv.pdf" target="_blank"><img class="contingut__imatge" src="img/4.jpg" alt="thumbnail-about-my-CV"></a> 
 				<p class="contingut__text" id="part4_4"></p>
 			</div>
 			<div class="contingut contingut__resposta bottom">
@@ -295,50 +299,23 @@
     <!-- MENU -->
     <nav class="menu">
       
-        <div class="icon__menu">
+        <div class="icon__menu" onclick="xat.menu();">
 		  <i class="fa fa-caret-up" id="iconM" name="iconM" aria-hidden="true"></i>
 		  <p>Try to say...</p>
         </div>
         
 
         <ul class="menu__wrap">
-			<a href="#moreabout"><li onclick="xat.showBtn(0);">More about!</li></a>
-			<a href="#study"><li onclick="xat.showBtn(1);">Where did you study?</li></a>
-			<a href="#experience"><li onclick="xat.showBtn(2);">Experience?</li></a>
-			<a href="#contact"><li onclick="xat.showBtn(3);">Contact us!</li></a>
-			<a href="#hi"><li onclick="xat.showBtn(4);">Hi, again!</li></a>
+			<a href="#moreabout"><li onclick="xat.showBtn(0);" id="btn1">More about!</li></a>
+			<a href="#study"><li onclick="xat.showBtn(1);" id="btn2">Where did you study?</li></a>
+			<a href="#experience"><li onclick="xat.showBtn(2);" id="btn3">Experience?</li></a>
+			<a href="#contact"><li onclick="xat.showBtn(3);" id="btn4">Contact us!</li></a>
+			<a href="#hi"><li onclick="xat.showBtn(4);" id="btn5">Hi, again!</li></a>
         </ul>
 
     </nav>
 
-	<!-- MENU RESPONSIVE BTN -->
-	<script type="text/javascript">
-
-		$("nav .icon__menu").click(function() {
-			  $(".menu__wrap").slideToggle();
-		});
-  
-		$(window).resize(function() {
-			  if($(window).width() > 1024) {
-					$("ul").removeAttr('style');
-			  }
-		});
-  
-	</script>
-
-	<!-- DARK MODE BTN -->
-	<script>
-		const btn = document.querySelector(".btn-toggle");
-		const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-		btn.addEventListener("click", function () {
-  			if (prefersDarkScheme.matches) {
-    			document.body.classList.toggle("light-theme");
-  		}else {
-    		document.body.classList.toggle("dark-theme");
-  		}
-	});
-	</script>
+	
     <script src="js/audio.js"></script>
 </body>
 </html>
