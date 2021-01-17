@@ -29,14 +29,17 @@ chat.Main.prototype = function () {
 		if (selBtn === 0) {
 			document.getElementById('primeraPart').style.display = 'flex';
 			document.getElementById('primeraPart').style.flexDirection = 'column';
+		
 			
 			$('#part1_1').html('More about!');
 			$('#part1_2').html('For sure!');
-			$('#part1_3').html('I absolutely love creating minimal soul and <span>interested</span> about <span>AR Environment</span>, using and involving visual experiences in each project by focussing on <span>creative ideas</span> that make people have <span>goosebumps</span> 😃');
+			$('#part1_3').html('I absolutely love creating minimal style and <span>interested</span> about <span>AR Environment</span>, using and involving visual experiences in each project by focussing on <span>creative ideas</span> that make people have <span>goosebumps</span> 😃');
 			$('#part1_4').html('I’ll tell you a secret: I love exercising, playing clarinet, my laptop, my camera, good company and a good landscape to share with cool people 😎');
 			
 			$('#primeraPart').find('.contingut__hora').text(composeTime())
 			$('#primeraPart').find('.contingut__hora--resposta').text(composeTime())
+
+			$('#primeraPart').scrollIntoView({ block: "start", behavior: "smooth" });
 		}else if (selBtn === 1) {
 			document.getElementById('segonaPart').style.display = 'flex';
 			document.getElementById('segonaPart').style.flexDirection = 'column';
@@ -48,6 +51,9 @@ chat.Main.prototype = function () {
 			
 			$('#segonaPart').find('.contingut__hora').text(composeTime())
 			$('#segonaPart').find('.contingut__hora--resposta').text(composeTime())
+
+			$('#segonaPart').scrollIntoView({ block: "start", behavior: "smooth" });
+			
 		}else if (selBtn === 2) {
 			document.getElementById('terceraPart').style.display = 'flex';
 			document.getElementById('terceraPart').style.flexDirection = 'column';
@@ -60,9 +66,13 @@ chat.Main.prototype = function () {
 			
 			$('#terceraPart').find('.contingut__hora').text(composeTime())
 			$('#terceraPart').find('.contingut__hora--resposta').text(composeTime())
+
+			$('#terceraPart').scrollIntoView({ block: "start", behavior: "smooth" });
+			
 		}else if (selBtn === 3){
 			document.getElementById('quartaPart').style.display = 'flex';
 			document.getElementById('quartaPart').style.flexDirection = 'column';
+			
 			
 			$('#part4_1').html('Contact us!');
 			$('#part4_2').html('<span>Join in</span> my vision of understanding life and feel free to talk to me for in-depht contact.');
@@ -71,6 +81,9 @@ chat.Main.prototype = function () {
 			
 			$('#quartaPart').find('.contingut__hora').text(composeTime())
 			$('#quartaPart').find('.contingut__hora--resposta').text(composeTime())
+
+			$('#quartaPart').scrollIntoView({ block: "start", behavior: "smooth" });
+			
 		}else{
 			document.getElementById('primeraPart').style.display = 'none';
 			document.getElementById('segonaPart').style.display = 'none';
@@ -114,7 +127,7 @@ chat.Main.prototype = function () {
     
 		return hours + ':' + minutes;
 	};
-
+	
 	//public members
 	return {
 		load: load,
