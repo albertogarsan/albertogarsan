@@ -121,26 +121,6 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
   color: var(--blanc);
 }
 
-
-
-.tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  color: var(--blanc);
-  text-align: center;
-  padding: 5px 0;
-  font-weight: 300;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.submenu__lletraA--item:hover .tooltiptext {
-  visibility: visible;
-}
-
-
 /* ///////////////////////////////////END A */
 
 
@@ -193,6 +173,7 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
   position: relative;
   align-self: flex-start;
   width: auto;
+  background-color: var(--negre);
 }
 
 .contingut__resposta:last-child {
@@ -209,7 +190,6 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
 
 body.dark-theme .contingut__resposta {
   background-color: var(--gris);
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
 }
 
 .contingut__pregunta {
