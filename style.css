@@ -178,16 +178,10 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
 }
 
 .contingut {
-  width: auto;
   max-width: 80%;
-  align-self: start;
   border-radius: 30px;
   margin: 20px 10px 0px 10px;
 }
-
-/* .contingut:first-child {
-  margin: 40px 10px 10px 10px;
-} */
 
 @media (max-width: 480px) {
   .contingut {
@@ -196,13 +190,12 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
 }
 
 .contingut__resposta {
-  background-color: var(--negre);
   position: relative;
   align-self: flex-start;
   width: auto;
 }
 
-.contingut__resposta:last-child{
+.contingut__resposta:last-child {
   background-color: transparent;
 }
 
@@ -244,18 +237,13 @@ body.dark-theme .contingut__resposta {
 }
 
 .contingut__hora p{
+
   font-size: .8rem;
   margin: 0;
   padding: 0;
 }
 
 .contingut__hora--resposta {
-  font-size: .8rem;
-  margin: 0;
-  padding: 0;
-}
-
-.contingut__hora--resposta p{
   font-size: .8rem;
   margin: 0;
   padding: 0;
@@ -293,7 +281,7 @@ h1 {
 
 /* ///////////////////////////////// PUNTS */
 .top {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .punts {
@@ -933,7 +921,7 @@ span {
 .volume-controls {
   width: 30px;
   height: 135px;
-  background-color: rgba(0, 0, 0, 0.62);
+  background-color:var(--negre);
   border-radius: 7px;
   position: absolute;
   left: -3px;

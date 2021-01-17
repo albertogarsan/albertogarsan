@@ -171,7 +171,7 @@ function directionAware() {
     volumeControls.style.bottom = '-54px';
     volumeControls.style.left = '54px';
   } else if(audioPlayer.offsetTop < 154) {
-    volumeControls.style.bottom = '-164px';
+    volumeControls.style.bottom = '52px';
     volumeControls.style.left = '-3px';
   } else {
     volumeControls.style.bottom = '52px';
