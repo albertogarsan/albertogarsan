@@ -39,7 +39,7 @@ chat.Main.prototype = function () {
 			$('#primeraPart').find('.contingut__hora').text(composeTime())
 			$('#primeraPart').find('.contingut__hora--resposta').text(composeTime())
 
-			$('#primeraPart').scrollIntoView({ block: "start", behavior: "smooth" });
+			
 		}else if (selBtn === 1) {
 			document.getElementById('segonaPart').style.display = 'flex';
 			document.getElementById('segonaPart').style.flexDirection = 'column';
@@ -66,6 +66,7 @@ chat.Main.prototype = function () {
 			$('#terceraPart').find('.contingut__hora').text(composeTime())
 			$('#terceraPart').find('.contingut__hora--resposta').text(composeTime())
 
+
 			
 		}else if (selBtn === 3){
 			document.getElementById('quartaPart').style.display = 'flex';
@@ -79,6 +80,8 @@ chat.Main.prototype = function () {
 			
 			$('#quartaPart').find('.contingut__hora').text(composeTime())
 			$('#quartaPart').find('.contingut__hora--resposta').text(composeTime())
+
+			
 			
 		}else{
 			document.getElementById('primeraPart').style.display = 'none';
