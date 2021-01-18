@@ -196,6 +196,10 @@ body.dark-theme .contingut__resposta {
   background-color: var(--gris);
 }
 
+body.dark-theme .contingut__resposta:last-child {
+  background-color: transparent;
+}
+
 .contingut__pregunta {
   background-color: var(--taronja);
   align-self: flex-end;
