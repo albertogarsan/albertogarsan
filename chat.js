@@ -33,7 +33,7 @@ chat.Main.prototype = function () {
 			
 			$('#part1_1').html('More about!');
 			$('#part1_2').html('For sure!');
-			$('#part1_3').html('I absolutely love creating <span>minimal style</span> and I am really <span>interested in AR Environment</span>, using and involving visual experiences in each project by focussing on <span>creative ideas</span> that make people have <span>goosebumps</span> 😃');
+			$('#part1_3').html('I absolutely love creating <span>minimal style</span> and I am really <span>interested in AR Environment</span>, using and involving visual experiences in each project by focusing on <span>creative ideas</span> that make people have <span>goosebumps</span> 😃');
 			$('#part1_4').html('I’ll tell you a secret: I love exercising, playing clarinet, my laptop, my camera, good company and a good landscape to share with cool people 😎');
 			
 
@@ -53,7 +53,7 @@ chat.Main.prototype = function () {
 
 			$('#part2_1').html('Where did you study?');
 			$('#part2_2').html('I studied <span>Interactive Digital Development Design at ESAT Valencia</span>  (2020-2021) and <span> Audiovisual Communication at the Polytechnic University of Valencia</span> (2014-2018).');
-			$('#part2_3').html('One thing that characterizes my learning is that it has been a very <span>self-taught train</span>. My knowledge has increase thanks to every book, course, lecture and article.');
+			$('#part2_3').html('One thing that characterizes my learning is that it has been a very <span>self-taught training</span>. My knowledge has increased thanks to every book, course, lecture and article.');
 			$('#part2_4').html('<span>‘Never stop learning’</span>  could be my late motiv.');
 			
 
