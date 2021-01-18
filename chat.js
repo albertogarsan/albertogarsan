@@ -20,7 +20,7 @@ chat.Main.prototype = function () {
 		$('#menuTxt').html('Try to say...');
 		$('#btn1').html('More about!');
 		$('#btn2').html('Where did you study?');
-		$('#btn3').html('Experience');
+		$('#btn3').html('Experience?');
 		$('#btn4').html('Contact me!');
 		$('#btn5').html('Hi, again!');
 	},
@@ -53,7 +53,7 @@ chat.Main.prototype = function () {
 
 			$('#part2_1').html('Where did you study?');
 			$('#part2_2').html('I studied <span>Interactive Digital Development Design at ESAT Valencia</span>  (2020-2021) and <span> Audiovisual Communication at the Polytechnic University of Valencia</span> (2014-2018).');
-			$('#part2_3').html('One thing that characterizes my learning is that it has been a very <span>self-taught training</span>. My knowledge has increased thanks to every book, course, lecture and article.');
+			$('#part2_3').html('One thing that characterizes my learning is that it has been by <span>self-taught training</span>. My knowledge has increased thanks to every book, course, lecture and article.');
 			$('#part2_4').html('<span>‘Never stop learning’</span>  could be my late motiv.');
 			
 
