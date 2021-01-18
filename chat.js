@@ -72,7 +72,7 @@ chat.Main.prototype = function () {
 			
 
 			$('#part3_1').html('Experience?');
-			$('#part3_2').html('Despite the fact that I started my career as a comunicator and designer, I have been able to take place in diferent projects with social responsability');
+			$('#part3_2').html('Despite the fact that I started my career as a comunicator and designer, I have been able to take part in diferent projects with social responsability');
 			$('#part3_3').html('<span>A diabetic in the Dakar: <a href="https://www.undiabeticoeneldakar.org" target="_blank">undiabeticoeneldakar.org</a></span>');
 			$('#part3_4').html('<span>The website of the village of Potries: <a href="https://www.potries.org" target="_blank">potries.org</a> | <a href="http://www.turisme.potries.org" target="_blank">turisme.potries.org</a> | <a href="http://musicfest.potries.org" target="_blank">musicfest.potries.org</a></span>');
 			$('#part3_5').html('To conclude, this page has been designed and coded by my very self.');
