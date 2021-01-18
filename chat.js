@@ -21,7 +21,7 @@ chat.Main.prototype = function () {
 		$('#btn1').html('More about!');
 		$('#btn2').html('Where did you study?');
 		$('#btn3').html('Experience');
-		$('#btn4').html('Contact us!');
+		$('#btn4').html('Contact me!');
 		$('#btn5').html('Hi, again!');
 	},
 
