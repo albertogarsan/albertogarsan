@@ -151,7 +151,7 @@ body.dark-theme .menu__lletraA--fixed:hover .submenu__lletraA a {
 @media (max-width: 1024px) {
   .contenidor {
     max-width: 60%;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
 }
 
@@ -1040,6 +1040,12 @@ img {
   }
 
   body.light-theme .menu__wrap a {
+    color: var(--negre);
+  }
+
+  body.light-theme .icon__menu i {
+    font-size: 24px;
+    cursor: pointer;
     color: var(--negre);
   }
 
