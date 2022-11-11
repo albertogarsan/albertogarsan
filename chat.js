@@ -94,7 +94,7 @@ chat.Main.prototype = function() {
                 $('#part4_1').html('Contact me!');
                 $('#part4_2').html('<span>Join in</span> my vision of understanding life and feel free to talk to me for in-depht contact.');
                 $('#part4_3').html('Here is my social media platforms: <span><a href="https://www.instagram.com/albertogarsan_" target="_blank">instagram</a>, <a href="https://www.linkedin.com/in/albertogarciasan/" target="_blank">linkedin</a></span>');
-                $('#part4_4').html('<span><a href="mailto:albertogarsan@outlook.com" target="_blank">Mail me</a></span> and see my <span><a href="CV-albertogarsan_compressed.pdf" target="_blank">CV!</a></span>');
+                $('#part4_4').html('<span><a href="mailto:albertogarsan@outlook.com" target="_blank">Mail me</a></span> and see my <span><a href="albertogarsan-cv.pdf" target="_blank">CV!</a></span>');
 
 
                 $('#quartaPart').find('.contingut__hora').text(composeTime())
