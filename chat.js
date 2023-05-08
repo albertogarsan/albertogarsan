@@ -10,15 +10,15 @@ chat.Main.prototype = function() {
             document.getElementById('segonaPart').style.display = 'none';
             document.getElementById('terceraPart').style.display = 'none';
             document.getElementById('quartaPart').style.display = 'none';
-            document.getElementById('hi').innerHTML = "Hi there! My name is <span>Alberto Garsan</span>. <br>I am a Valencia-based <span>UX/UI Designer and Front-end development lover.</span>";
-            document.getElementById('text1').innerHTML = "Exploring the limits between visual design, to learn about the users, to guide them through design thinking methodolgies like double diamond and code CSS, <span> drives me nuts!</span>";
+            document.getElementById('hi').innerHTML = "Hi there! My name is <span>Alberto Garsan</span>. <br>I am a Valencia-based <span>UX Engineer</span>";
+            document.getElementById('text1').innerHTML = "Exploring the limits between visual design, to learn about the users, to guide them through design thinking methodolgies like double diamond and code, <span> drives me nuts!</span>";
 
             $('#default').find('.contingut__hora--resposta').text(composeTime())
 
 
             $('#menuTxt').html('Try to say...');
             $('#btn1').html('More about!');
-            $('#btn2').html('Where did you study?');
+            $('#btn2').html('Studies?');
             $('#btn3').html('Experience?');
             $('#btn4').html('Contact me!');
             $('#btn5').html('Hi, again!');
@@ -32,7 +32,7 @@ chat.Main.prototype = function() {
 
                 $('#part1_1').html('More about!');
                 $('#part1_2').html('For sure!');
-                $('#part1_3').html('I absolutely love creating <span>minimal style</span> and I am really <span>interested in AR Environment</span>, using and involving visual experiences in each project by focusing on <span>creative ideas</span> that make people have <span>goosebumps</span> 😃');
+                $('#part1_3').html('I absolutely love creating <span>minimal style</span> and I am really <span>interested in Frontend issues</span>, using and involving visual experiences in each project by focusing on <span>the user</span> that make them have <span>goosebumps</span> 😃');
                 $('#part1_4').html('I’ll tell you a secret: I love exercising, playing clarinet, my laptop, my camera, good company and a good landscape to share with cool people 😎');
 
 
@@ -50,8 +50,8 @@ chat.Main.prototype = function() {
                 document.getElementById('segonaPart').style.flexDirection = 'column';
 
 
-                $('#part2_1').html('Where did you study?');
-                $('#part2_2').html('I studied <span>Interactive Digital Development Design at ESAT Valencia</span>  (2020-2021) and <span> Audiovisual Communication at the Polytechnic University of Valencia</span> (2014-2018).');
+                $('#part2_1').html('Studies?');
+                $('#part2_2').html('I currently study an Official Advanced Specific Vocational Training in Web Application Development where I am learning about Java, Python, JS code... And I studied <span>Interactive Digital Development Design at ESAT Valencia</span>  (2020-2021) and <span> Audiovisual Communication at the Polytechnic University of Valencia</span> (2014-2018).');
                 $('#part2_3').html('One thing that characterizes my learning is that it has been by <span>self-taught training</span>. My knowledge has increased thanks to every book, course, lecture and article.');
                 $('#part2_4').html('<span>‘Never stop learning’</span>  could be my late motiv.');
 
