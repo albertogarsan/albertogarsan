@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Webpage of Alberto Garsan, UI/UX Designer & Front-end Developer based in València" />
-    <meta name="keywords" content="albertogarsan, web designer, frontend developer, ui design, ux design, ui/ux design, ui designer, ux designer, ui/ux designer, alberto garsan, albertogarsan_, albertogarsan1, diseñador web, desarrollo web, valencia" />
+    <meta name="description"
+        content="Webpage of Alberto Garsan, UI/UX Designer & Front-end Developer based in València" />
+    <meta name="keywords"
+        content="albertogarsan, web designer, frontend developer, ui design, ux design, ui/ux design, ui designer, ux designer, ui/ux designer, alberto garsan, albertogarsan_, albertogarsan1, diseñador web, desarrollo web, valencia" />
     <meta name="author" content="Alberto Garsan" />
     <meta name="copyright" content="Alberto Garcia Sánchez" />
     <title>albertogarsan</title>
 
     <!-- NORMALIZE -->
-    <link rel="stylesheet" href="normalize.css">
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
 
     <!-- ESTILS -->
     <link rel="stylesheet" href="style.css">
@@ -29,11 +31,10 @@
     <script src="fakejquery.js"></script>
 
     <!-- CHAT Buttons -->
-    <script src="chat.js"></script>
+    <script src="chat.js" defer></script>
     <script>
-        var xat = new chat.Main();
-        window.onload = function() {
-            xat.load();
+        window.onload = function () {
+            iniciarXat()
         }
     </script>
 
@@ -49,30 +50,30 @@
             <div class="fixed">
                 <ul class="submenu__lletraA">
 
-                    <li class="submenu__lletraA--item btn-toggle" onclick="xat.darkMode();">
+                    <li class="submenu__lletraA--item btn-toggle" onclick="darkMode();">
                         <a>
                             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-								<path fill="currentColor"
-								d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
-							</svg>
+                                <path fill="currentColor"
+                                    d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
+                            </svg>
                         </a>
                     </li>
 
                     <li class="submenu__lletraA--item">
                         <a href="https://www.instagram.com/albertogarsan1" target="_blank">
                             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-								<path fill="currentColor"
-								d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-							</svg>
+                                <path fill="currentColor"
+                                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                            </svg>
                         </a>
                     </li>
 
                     <li class="submenu__lletraA--item">
                         <a href="https://www.linkedin.com/in/albertogarciasan/" target="_blank">
                             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-								<path fill="currentColor"
-								d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
-							</svg>
+                                <path fill="currentColor"
+                                    d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -107,216 +108,111 @@
 
         <!-- primeraPart . moreabout -->
         <!-- Primera resposta -->
-        <section id="primeraPart">
-            <div class="contingut contingut__pregunta pregunta__animacio">
-                <a name="moreabout"></a>
-                <p class="contingut__text contingut__text--pregunta" id="part1_1"></p>
-            </div>
-            <div class="contingut contingut__pregunta1 pregunta__animacio bottom">
-                <div class="contingut__hora hora"></div>
-            </div>
-            <div class="punts">
-                <div class="punt"></div>
-                <div class="punt"></div>
-                <div class="punt"></div>
-            </div>
-            <!-- Tercer missatge -->
-            <div class="contingut contingut__resposta msg4">
-                <p class="contingut__text" id="part1_2"></p>
-            </div>
-            <!-- Quart missatge -->
-            <div class="contingut contingut__resposta msg5">
-                <p class="contingut__text" id="part1_3"></p>
-            </div>
-            <!-- Quint missatge -->
-            <div class="contingut contingut__resposta msg6">
-                <p class="contingut__text" id="part1_4"></p>
-            </div>
-            <div class="contingut contingut__resposta msg6 bottom">
-                <div class="contingut__hora--resposta hora2"></div>
-            </div>
-        </section>
 
         <!-- segonaPart . study -->
         <!-- Segona resposta -->
-        <section id="segonaPart">
-            <div class="contingut contingut__pregunta pregunta__animacio">
-                <a name="study"></a>
-                <p class="contingut__text contingut__text--pregunta" id="part2_1"></p>
-            </div>
-            <div class="contingut contingut__pregunta1 pregunta__animacio bottom">
-                <div class="contingut__hora hora">
-                    <p></p>
-                </div>
-            </div>
-            <div class="escrivint">
-                <div class="punts">
-                    <div class="punt"></div>
-                    <div class="punt"></div>
-                    <div class="punt"></div>
-                </div>
-            </div>
-            <!-- Sise missatge -->
-            <div class="contingut contingut__resposta msg4">
-                <p class="contingut__text" id="part2_2"></p>
-            </div>
-            <!-- Septim missatge -->
-            <div class="contingut contingut__resposta msg5">
-                <p class="contingut__text" id="part2_3"></p>
-            </div>
-            <!-- Octau missatge -->
-            <div class="contingut contingut__resposta msg6">
-                <p class="contingut__text" id="part2_4"></p>
-            </div>
-            <div class="contingut contingut__resposta msg6 bottom">
-                <div class="contingut__hora--resposta hora2">
-                    <p></p>
-                </div>
-            </div>
-        </section>
 
         <!-- terceraPart . experience -->
         <!-- Tercera resposta -->
-        <section id="terceraPart">
-            <div class="contingut contingut__pregunta pregunta__animacio">
-                <a name="experience"></a>
-                <p class="contingut__text contingut__text--pregunta" id="part3_1"></p>
-            </div>
-            <div class="contingut contingut__pregunta1 pregunta__animacio bottom">
-                <div class="contingut__hora hora"></div>
-            </div>
-            <div class="escrivint">
-                <div class="punts">
-                    <div class="punt"></div>
-                    <div class="punt"></div>
-                    <div class="punt"></div>
-                </div>
-            </div>
-            <!-- Nove missatge -->
-            <div class="contingut contingut__resposta msg4">
-                <p class="contingut__text" id="part3_2"></p>
-            </div>
-            <!-- Decim missatge -->
-            <div class="contingut contingut__resposta msg5">
-                <img class="contingut__imatge" src="2.jpg" alt="">
-                <p class="contingut__text" id="part3_3"></p>
-            </div>
-            <!-- Undecim missatge -->
-            <div class="contingut contingut__resposta msg6">
-                <img class="contingut__imatge" src="3.jpg" alt="">
-                <p class="contingut__text" id="part3_4"></p>
-            </div>
-            <!-- Duodecim missatge -->
-            <div class="contingut contingut__resposta msg7">
-                <p class="contingut__text" id="part3_5"></p>
-            </div>
-            <div class="contingut contingut__resposta bottom">
-                <div class="contingut__hora--resposta hora3"></div>
-            </div>
-        </section>
 
         <!-- quartaPart . contact -->
         <!-- Quarta resposta -->
-        <section id="quartaPart">
-            <a name="contact"></a>
-            <div class="contingut contingut__pregunta pregunta__animacio" id="seleccio4">
-                <p class="contingut__text contingut__text--pregunta" id="part4_1"></p>
-            </div>
-            <div class="contingut contingut__pregunta1 pregunta__animacio bottom">
-                <div class="contingut__hora hora"></div>
-            </div>
-            <div class="escrivint">
-                <div class="punts">
-                    <div class="punt"></div>
-                    <div class="punt"></div>
-                    <div class="punt"></div>
-                </div>
-            </div>
-            <!-- Decim tercer missatge AUDIO 
-            <div class="contingut contingut__resposta msg8">
-                <div class="audio green-audio-player">
-                    <div class="loading">
-                        <div class="spinner"></div>
-                    </div>
-                    <div class="play-pause-btn">
-                        <!--PAUSE ICON
-						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-							<path fill="white" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
-						</svg>
-					</div>
-					<div class="controls">
-						<span class="current-time">0:00</span>
-						<div class="slider" data-direction="horizontal">
-							<div class="progress">
-								<div class="pin" id="progress" data-method="rewind"></div>
-							</div>
-						</div>
-						<span class="total-time">0:00</span>
-					</div>
-					<div class="volume">
-						<div class="volume-btn"> <!--VOLUMEN ICON-
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-								<path fill="white" fill-rule="evenodd" d="M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z" id="speaker"/>
-							</svg>
-						</div>
-						<div class="volume-controls hidden">
-							<div class="slider" data-direction="vertical">
-								<div class="progress">
-									<div class="pin" id="volume-pin" data-method="changeVolume"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<audio crossorigin>
-						<source src="audio1.mp3" type="audio/mpeg">
-					</audio>
-				</div>
-			</div> -->
-            <!-- Decim quart missatge -->
-            <div class="contingut contingut__resposta msg9">
-                <p class="contingut__text" id="part4_2"></p>
-            </div>
-            <!-- Decim quint missatge -->
-            <div class="contingut contingut__resposta msg10">
-                <p class="contingut__text" id="part4_3"></p>
-            </div>
-            <!-- Decim sext missatge -->
-            <div class="contingut contingut__resposta msg11">
-                <a href="albertogarsan-cv.pdf" target="_blank"><img class="contingut__imatge" src="4.jpg" alt="thumbnail-about-my-CV"></a>
-                <p class="contingut__text" id="part4_4"></p>
-            </div>
-            <div class="contingut contingut__resposta bottom">
-                <div class="contingut__hora--resposta hora3"></div>
-            </div>
-        </section>
     </div>
 
     <!-- MENU -->
     <nav class="menu">
-        <div class="icon__menu" onclick="xat.menu();">
+        <div class="icon__menu" onclick="menu();">
             <i class="fa fa-caret-up" id="iconM" name="iconM" aria-hidden="true"></i>
             <p>Try to say...</p>
         </div>
 
         <ul class="menu__wrap">
             <a href="#moreabout">
-                <li onclick="xat.showBtn(0);" id="btn1">More about!</li>
+                <li onclick="showBtn(0);" id="btn1">More about!</li>
             </a>
             <a href="#study">
-                <li onclick="xat.showBtn(1);" id="btn2">Studies?</li>
+                <li onclick="showBtn(1);" id="btn2">Studies?</li>
             </a>
             <a href="#experience">
-                <li onclick="xat.showBtn(2);" id="btn3">Experience?</li>
+                <li onclick="showBtn(2);" id="btn3">Experience?</li>
             </a>
             <a href="#contact">
-                <li onclick="xat.showBtn(3);" id="btn4">Contact me!</li>
+                <li onclick="showBtn(3);" id="btn4">Contact me!</li>
             </a>
             <a href="#hi">
-                <li onclick="xat.showBtn(4);" id="btn5">Hi, again!</li>
+                <li onclick="showBtn(4);" id="btn5">Hi, again!</li>
             </a>
         </ul>
     </nav>
-    <script src="audio.js"></script>
+
+    <div class="grid__portfolio hidden">
+        <div class="grid__portfolio__wrapper">
+            <section class="portfolio__contingut">
+                <nav class="portfolio__breadcrumb">
+                    <a href="#">
+                        <span class="portfolio__breadcrumb__item--default" onclick="removeWorksPage()">Chat again</span>
+                    </a>
+                    <a href="">
+                        <span class="portfolio__breadcrumb__item--default">/</span>
+                    </a>
+                    <a href="#">
+                        <span class="portfolio__breadcrumb__item--pressed">Works</span>
+                    </a>
+                </nav>
+                <div class="portfolio__filters">
+                    <ul class="filters__menu__wrap menu__wrap__filters">
+                        <a class="active" onclick="resetFilter()">
+                            <li>All</li>
+                        </a>
+                        <a onclick="filterByUX()">
+                            <li>UX</li>
+                        </a>
+                        <a onclick="filterByFrontend()">
+                            <li>Front-end</li>
+                        </a>
+                    </ul>
+                </div>
+                <section class="portfolio__works">
+                    <div class="portfolio__works__wrapper">
+                        <a href="https://github.com/albertogarsan/compresor-imagenes.github.io" target="_blank" class="portfolio__card" data-filter="frontend">
+                            <h2 class="portfolio__card__titol">Compresor de imágenes
+                            </h2>
+                            <p class="portfolio__card__descripcio">Comprime imágenes que le importemos y devuelve la exportación. Con Node y Express.</p>
+                            <img class="portfolio__card__thumbnail" src="screenshots/compress.jpeg" alt="">
+                        </a>
+                        <a href="https://github.com/albertogarsan/field-component.github.io" target="_blank" class="portfolio__card" data-filter="frontend">
+                            <h2 class="portfolio__card__titol">Field component</h2>
+                            <p class="portfolio__card__descripcio">Implementación en código del componente field estudiada la UX para un trabajo profesional.</p>
+                            <img class="portfolio__card__thumbnail" src="screenshots/component-input.png" alt="">
+                        </a>
+                        <a href="" target="_blank" class="portfolio__card" data-filter="frontend">
+                            <h2 class="portfolio__card__titol">Weather widget</h2>
+                            <p class="portfolio__card__descripcio">Widget realizado con Javascript que apunta a la API del tiempo de AEMET</p>
+                            <img class="portfolio__card__thumbnail" src="screenshots/widget.png" alt="">
+                        </a>
+                        <a href="https://github.com/albertogarsan/piedra-papel-tijera.github.io" target="_blank" class="portfolio__card" data-filter="frontend">
+                            <h2 class="portfolio__card__titol">Piedra, papel, tijera</h2>
+                            <p class="portfolio__card__descripcio">Juego realizado con Vanilla javascript que ejecuta el juego de manos.</p>
+                            <img class="portfolio__card__thumbnail" src="screenshots/piedrapapeltijera.png" alt="">
+                        </a>
+                        <a href="https://github.com/albertogarsan/continentes.github.io" target="_blank" class="portfolio__card" data-filter="frontend">
+                            <h2 class="portfolio__card__titol">Continentes</h2>
+                            <p class="portfolio__card__descripcio">Práctica de llamada a una API donde filtrar continentes por población ascendente, descendente y por extensión.</p>
+                            <img class="portfolio__card__thumbnail" src="screenshots/continentes.png" alt="">
+                        </a>
+                    </div>
+                </section>
+
+                <nav class="portfolio__menu">
+                    <ul class="portfolio__menu__wrap" onclick="removeWorksPage()">
+                        <a>
+                            <li>Back to chat</li>
+                        </a>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </div>
 </body>
 
 </html>
